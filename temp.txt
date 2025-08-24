@@ -1,1 +1,20 @@
-user-role   
+Key Features of Your Multi-Tenant SaaS:
+✅ Tenant Registration: Gym owners can create their own accounts
+✅ Data Isolation: Each gym's data is completely separate using tenant_id
+✅ Secure Authentication: JWT tokens include tenant context
+✅ Automatic Filtering: All database queries are automatically filtered by tenant
+✅ Tenant Branding: Each gym sees their own name in the header
+✅ Role-Based Access: Support for different user roles within each gym
+✅ Scalable Architecture: Can support thousands of gym businesses
+
+Pricing Plans: Add subscription management (Stripe integration)
+
+Custom Domains: Allow gyms to use their own domains
+
+Tenant Settings: Allow gyms to customize their settings
+
+Multi-User Support: Allow gym owners to invite staff members
+
+API Rate Limiting: Implement per-tenant rate limiting
+
+Analytics Dashboard: Show tenant-specific usage analytics
