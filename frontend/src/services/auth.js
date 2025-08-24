@@ -10,3 +10,5 @@ export async function signup(payload){
 export function saveAuth(a){ localStorage.setItem('auth', JSON.stringify(a)) }
 export function getAuth(){ const v=localStorage.getItem('auth'); return v? JSON.parse(v): null }
 export function logout(){ localStorage.removeItem('auth') }
+
+

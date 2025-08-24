@@ -9,6 +9,7 @@ import Forgot from './pages/Auth/Forgot.jsx'
 import Dashboard from './pages/Auth/Dashboard.jsx'
 import Members from './pages/Auth/Members.jsx'
 import Membership from './pages/Auth/Membership.jsx'
+import Account from './pages/Auth/Account.jsx';
 import { getAuth } from './services/auth.js'
 function PrivateRoute({ children })
 { const a=getAuth();
@@ -53,7 +54,8 @@ createRoot(document.getElementById('root')).render(
         <Route index element={<PrivateRoute><Dashboard/></PrivateRoute>} />
         <Route path="members" element={<Members />} />
         <Route path="membership" element={<Membership />} />
-      {/* </Route> */}
+         <Route path="account" element={<Account />} />
+
 
           {/* <Route path="login" element={<Login/>} />
           <Route path="signup" element={<Signup/>} />
