@@ -1,0 +1,1 @@
+export default function Forgot(){ return <div style={{padding:24}}>Forgot password: ask admin to reset.</div> }
