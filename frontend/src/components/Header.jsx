@@ -1,69 +1,103 @@
-// import React from "react";
+
+
+
+// import React from 'react';
+// import { Link, useLocation, useNavigate } from 'react-router-dom';
+// import { getAuth, logout } from '../services/auth.js';
+// import '../styles/Header.css';
 
 // export default function Header() {
+//   const location = useLocation();
+//   const navigate = useNavigate();
+//   const auth = getAuth();
+
+//   const handleLogout = () => {
+//     logout();
+//     navigate('/login');
+//   };
+
+//   const isActiveTab = (path) => {
+//     return location.pathname === path ? 'nav-tab active' : 'nav-tab';
+//   };
+
 //   return (
-//     <header style={{ padding: "12px", background: "#333", color: "#fff" }}>
-//       <h1>Gym Management</h1>
+//     <header className="app-header">
+//       <div className="header-container">
+//         {/* Logo Section */}
+//         <div className="logo-section">
+//           <div className="logo-icon">G</div>
+//           <h1 className="logo-text">Gem of Gym</h1>
+//         </div>
+
+//         {/* Navigation Tabs */}
+//         <nav className="nav-tabs">
+//           <Link to="/" className={isActiveTab('/')}>
+//             <span className="nav-icon">📊</span>
+//             Dashboard
+//           </Link>
+//           <Link to="/members" className={isActiveTab('/members')}>
+//             <span className="nav-icon">👥</span>
+//             Members
+//           </Link>
+//           <Link to="/membership" className={isActiveTab('/membership')}>
+//             <span className="nav-icon">📋</span>
+//             Membership
+//           </Link>
+//         </nav>
+
+//         {/* User Profile Section */}
+//         <div className="user-profile">
+//           <div className="user-info">
+//             <div className="user-name">Admin User</div>
+//             <div className="user-role">Administrator</div>
+//           </div>
+//           <div className="user-avatar" onClick={handleLogout}>
+//             AU
+//           </div>
+//         </div>
+//       </div>
 //     </header>
 //   );
 // }
 
 
-
-import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
-import { logout, getAuth } from '../services/auth.js'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { getAuth, logout } from '../services/auth.js';
+import '../styles/Header.css';
 
 export default function Header() {
-  const nav = useNavigate();
+  const navigate = useNavigate();
   const auth = getAuth();
 
   const handleLogout = () => {
     logout();
-    nav('/login');
+    navigate('/login');
   };
 
   return (
-    <header style={{ 
-      background: '#ff4d00', 
-      color: 'white', 
-      padding: '1rem',
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center'
-    }}>
-      <div>
-        <h1>GYM Management System</h1>
-      </div>
-      
-      <nav>
-        <Link to="/" style={{ color: 'white', marginRight: '1rem', textDecoration: 'none' }}>
-          Dashboard
-        </Link>
-        <Link to="/members" style={{ color: 'white', marginRight: '1rem', textDecoration: 'none' }}>
-          Members
-        </Link>
-        <Link to="/trainers" style={{ color: 'white', marginRight: '1rem', textDecoration: 'none' }}>
-          Trainers
-        </Link>
-      </nav>
-      
-      <div>
-        <span style={{ marginRight: '1rem' }}>Welcome, {auth?.user?.username || 'User'}</span>
-        <button 
-          onClick={handleLogout}
-          style={{ 
-            background: 'white', 
-            color: '#ff4d00', 
-            border: 'none', 
-            padding: '0.5rem 1rem',
-            borderRadius: '4px',
-            cursor: 'pointer'
-          }}
-        >
-          Logout
-        </button>
+    <header className="app-header">
+      <div className="header-container">
+        {/* Logo Section */}
+        <div className="logo-section">
+          <div className="logo-icon">G</div>
+          <h1 className="logo-text">Gem of Gym</h1>
+        </div>
+
+        {/* User Profile Section */}
+        <div className="user-profile">
+          <div className="user-info">
+            <div className="user-name">Admin User</div>
+            <div className="user-role">Administrator</div>
+          </div>
+          <div className="user-avatar" onClick={handleLogout}>
+            AU
+          </div>
+        </div>
       </div>
     </header>
   );
 }
+
+
+
