@@ -15,7 +15,7 @@ body, html {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(to bottom right, #1e1d2a, #e95420);
+  /* background: linear-gradient(to bottom right, #1e1d2a, #e95420); */
 }
 
 /* Card container */
@@ -30,13 +30,23 @@ body, html {
 
 /* Logo/Icon */
 .login-logo {
-  background: #ff4d00;
+  /* background: #ff4d00;
   color: #fff;
   font-size: 28px;
   border-radius: 12px;
   padding: 12px;
   display: inline-block;
-  margin-bottom: 10px;
+  margin-bottom: 10px; */
+
+      background: #00BCD4;
+    color: #FFD;
+    font-size: 28px;
+    border-radius: 56px;
+    padding: 12px;
+    display: inline-block;
+    margin-bottom: 10px;
+    height: 60px;
+    width: 60px;
 }
 
 /* Title & subtitle */
@@ -133,7 +143,7 @@ body, html {
   width: 93%;
 }
 .login-form input:focus {
-  border-color: #ff4d00;
+  border-color: #26d7ef;
 }
 
 /* Error */
@@ -145,7 +155,7 @@ body, html {
 
 /* Submit button */
 .btn-submit {
-  background: #ff4d00;
+  background: #00BCD4;
   color: #fff;
   padding: 14px;
   border: none;
@@ -157,5 +167,15 @@ body, html {
   width: 100%;
 }
 .btn-submit:hover {
-  background: #e64500;
+  background: #0d9db0;
+}
+
+.success {
+  color: green;
+  font-size: 14px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background: #f0f9f0;
+  border: 1px solid #4caf50;
+  border-radius: 4px;
 }
